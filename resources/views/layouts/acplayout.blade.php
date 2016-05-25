@@ -60,7 +60,7 @@
     @endif
 
     <div class="container">
-        <div class="navacp">haloooooo</div>
+        <div class="navacp">halooooooo</div>
         @yield('content')
     </div>
 
