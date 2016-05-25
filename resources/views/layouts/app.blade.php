@@ -14,20 +14,45 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    {!! Html::style('css/css.css') !!}
 
     <style>
         body {
             font-family: 'Lato';
+            background-color:#26C4C0;
+            padding-top:75px;
+            padding-bottom:75px;
         }
 
         .fa-btn {
             margin-right: 6px;
         }
+
+        .container {
+            background-color:#26C4C0;
+            position:absolute;
+            margin: 0 auto;
+            width:70%;
+            padding-top:25px;
+            padding-bottom:25px;
+            height:100vh;
+            border-right: 1px solid white;
+        }
+
+        .container-2 {
+            background-color:#26C4C0;
+            right:15px;
+            position:absolute;
+            width:28%;
+            padding-top:25px;
+            padding-bottom:25px;
+            height:100vh;
+        }
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding-left:120px; padding-right:120px;">
+        
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -40,36 +65,39 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Blog
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Główna</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    @if(!\Auth::guest() && \Auth::user()->isBlogger())
+                        <li><a href="/admin">Panel Bloggera</a></li>
+                    @endif
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Zaloguj się</a></li>
+                        <li><a href="{{ url('/register') }}">Zarejestruj się</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ Auth::user()->username }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Wyloguj</a></li>
                             </ul>
                         </li>
                     @endif
                 </ul>
             </div>
-        </div>
+       
     </nav>
 
     @if (Session::has('flash_notification.message'))
@@ -79,8 +107,14 @@
             {{ Session::get('flash_notification.message') }}
         </div>
     @endif
-    
-    @yield('content')
+
+    <div class="container">
+        @yield('content')
+    </div>
+
+    <div class="container-2">
+        @yield('content-2')
+    </div>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
