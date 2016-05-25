@@ -13,42 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-    {!! Html::style('css/css.css') !!}
-
-    <style>
-        body {
-            font-family: 'Lato';
-            background-color:#26C4C0;
-            padding-top:75px;
-            padding-bottom:75px;
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-
-        .container {
-            background-color:#26C4C0;
-            position:absolute;
-            margin: 0 auto;
-            width:70%;
-            padding-top:25px;
-            padding-bottom:25px;
-            height:100vh;
-            border-right: 1px solid white;
-        }
-
-        .container-2 {
-            background-color:#26C4C0;
-            right:15px;
-            position:absolute;
-            width:28%;
-            padding-top:25px;
-            padding-bottom:25px;
-            height:100vh;
-        }
-    </style>
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-fixed-top" style="padding-left:120px; padding-right:120px;">

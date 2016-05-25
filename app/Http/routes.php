@@ -22,6 +22,8 @@ Route::get('/', 'HomeController@index');
 Route::group(['middleware' => ['auth', 'blogger']], function() {
 	
 	Route::get('/admin', 'AdminController@index');
+	Route::get('/admin/articles', 'AdminController@indexArticles');
+	Route::post('admin/storeArticle', ['uses' => 'AdminController@storeArticle', 'as' => 'store.article']);
 });
 
 

@@ -1,0 +1,58 @@
+body {
+  font-family: 'Lato';
+  background-color: #26C4C0;
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.fa-btn {
+  margin-right: 6px; }
+
+.container {
+  background-color: #26C4C0;
+  position: absolute;
+  margin: 0 auto;
+  width: 70%;
+  padding-bottom: 25px;
+  height: 100vh;
+  border-right: 1px solid white; }
+
+.container-2 {
+  background-color: #26C4C0;
+  right: 15px;
+  position: absolute;
+  width: 28%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  height: 100vh; }
+
+.panel-sort {
+  left: 0px;
+  position: static;
+  height: 30px;
+  background-color: #333333;
+  color: white;
+  padding: 5px;
+  padding-left: 40px;
+  width: 100%;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue; }
+
+.modal-header {
+  color: #ffffff;
+  background-color: #006dcc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+.show-article-body {
+  background-color: #333333;
+  color: white;
+  opacity: 0.9;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  position: absolute; }
+
+/*# sourceMappingURL=app.css.map */
