@@ -11,6 +11,12 @@ Blog Alpha Version 0.1
   3. Created panel for all Articles, did options for adding, editing, deleting articles.
   4. Installed npm and GULP, started working with Gulp and Sass.
   5. Added Summernote and Animate CSS for better and faster get experience.
+  6. Repair showing Layout with a better responsive page.
+  7. Added showing big text in body article with a better writing.
+  8. Added script for creating and editing exists Articles.
+  9. Added simple Requests for form validation.
+  10. Turned off adding pictures from PC with summernote.
+  11. Added some strip tags for article body.
 
 24/05/2016:
 
