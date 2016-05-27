@@ -4,6 +4,14 @@ This is my first big project, which i want build professionall. Under i will be 
 
 Blog Alpha Version 0.1
 
+27/05/2016:
+
+1. Fixed layout on main Page.
+2. Added select2 for better working.
+3. Created migration Tags for Articles with ManytoMany relationship.
+4. Added dynamically creating tags for articles(remember to change it with Ajax).
+5. Added Delete button for deleting articles.
+
 25/05/2016:
 
   1. Created migration for Articles and model Article, added fillable fields.
