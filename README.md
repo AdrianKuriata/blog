@@ -4,6 +4,10 @@ This is my first big project, which i want build professionall. Under i will be 
 
 Blog Alpha Version 0.1
 
+28/05/2016:
+
+1. Added creating Article with AJAX technology.
+
 27/05/2016:
 
 1. Fixed layout on main Page.
