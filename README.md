@@ -7,6 +7,7 @@ Blog Alpha Version 0.1
 28/05/2016:
 
 1. Added creating Article with AJAX technology.
+2. After add article added row with added information with ajax.
 
 27/05/2016:
 
