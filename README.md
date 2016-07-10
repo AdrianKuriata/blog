@@ -14,6 +14,8 @@ Blog Alpha Version 0.1
 6. Added showing form for creating posts in article if article is open.
 7. Added function to create post.
 8. Created migration to post with couple fields for getting info who added post like latitude, country, longitude, ip address etc.
+9. Created Post panel in ACP and showing all posts whichs guests added for the moderate.
+10. Added route to creating users(remember to end it).
 
 28/05/2016:
 
