@@ -11,6 +11,7 @@ Blog Alpha Version 0.1
 3. Created template to the showing article Page.
 4. Added provisional creating posts in article.
 5. Created template with showing posts in article.
+6. Added showing form for creating posts in article if article is open.
 
 28/05/2016:
 
