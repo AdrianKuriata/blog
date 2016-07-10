@@ -12,6 +12,8 @@ Blog Alpha Version 0.1
 4. Added provisional creating posts in article.
 5. Created template with showing posts in article.
 6. Added showing form for creating posts in article if article is open.
+7. Added function to create post.
+8. Created migration to post with couple fields for getting info who added post like latitude, country, longitude, ip address etc.
 
 28/05/2016:
 
