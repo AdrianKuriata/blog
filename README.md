@@ -9,6 +9,8 @@ Blog Alpha Version 0.1
 1. Added showing articles on the main Page.
 2. Created route to the showing article.
 3. Created template to the showing article Page.
+4. Added provisional creating posts in article.
+5. Created template with showing posts in article.
 
 28/05/2016:
 
