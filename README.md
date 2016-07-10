@@ -4,6 +4,12 @@ This is my first big project, which i want build professionall. Under i will be 
 
 Blog Alpha Version 0.1
 
+10/07/2016:
+
+1. Added showing articles on the main Page.
+2. Created route to the showing article.
+3. Created template to the showing article Page.
+
 28/05/2016:
 
 1. Added creating Article with AJAX technology.
