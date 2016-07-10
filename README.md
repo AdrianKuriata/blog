@@ -16,6 +16,7 @@ Blog Alpha Version 0.1
 8. Created migration to post with couple fields for getting info who added post like latitude, country, longitude, ip address etc.
 9. Created Post panel in ACP and showing all posts whichs guests added for the moderate.
 10. Added route to creating users(remember to end it).
+11. Added route to sending newsletters on E-mail(remember to end it).
 
 28/05/2016:
 
