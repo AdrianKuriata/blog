@@ -4,6 +4,14 @@ This is my first big project, which i want build professionall. Under i will be 
 
 Blog Alpha Version 0.1
 
+11/07/2016:
+
+1. Added count not checked post.
+2. Added preview article to which is added post.
+3. Added button with informations who added post like latitude, longitude, web browser, city, country etc.
+4. Added button to veryfication post.
+5. Added field to posts table :checked_post:.
+
 10/07/2016:
 
 1. Added showing articles on the main Page.
