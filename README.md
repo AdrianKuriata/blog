@@ -4,6 +4,12 @@ This is my first big project, which i want build professionall. Under i will be 
 
 Blog Alpha Version 0.1
 
+12/07/2016:
+
+1. Added Verification and Deleting post.
+2. Added count post in the article on the home page.
+3. Added latest post in the article on the home page.
+
 11/07/2016:
 
 1. Added count not checked post.
