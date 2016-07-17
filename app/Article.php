@@ -12,4 +12,14 @@ class Article extends Model
     {
     	return $this->belongsTo('App\User');
     }
+
+    public function tag()
+    {
+    	return $this->belongsToMany('App\Tag');
+    }
+
+    public function post()
+    {
+    	return $this->hasMany('App\Post');
+    }
 }
