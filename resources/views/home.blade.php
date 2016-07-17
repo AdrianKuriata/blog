@@ -1,14 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <article style="height:100%; background-color:white; margin-bottom:100px; padding-top:15px; padding-left:50px; padding-bottom:15px; border-top-left-radius: 10px; border-top-right-radius:10px; border:1px solid black; box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);">
-                <h1>To jest artykuł fajny</h1>
-                <p>To jest tekst artykułu, który jest naprawde fajny, nikt chyba nie zaprzeczy, prawda?</p>
-            </article>
-        </div>
-    </div>
+    @foreach($articles as $article)
+        <a href="/article/{{$article->article_title}}" style="text-decoration:none; color:black;">
+            <div class="row" style="min-height:300px;height:100%; width:100%; background-color:#f8f8f8; padding-top:15px; padding-left:30px; padding-bottom:15px; border:2px solid gray; @if($article->article_lock == true) border-left:4px solid red; @else border-left: 4px solid green; @endif">
+                <div class="col-md-8">
+                    <h1>{{ substr($article->article_title, 0, 30)}} @if(strlen($article->article_title) >= 30) ...@endif</h1>
+                    <p>{!! substr($article->article_body, 0, 1000) !!} ...</p>
+                </div>
+                <div class="col-md-4">
+                    <div><b>Dodał:</b> {{$article->user['username']}}</div>
+                    <div><b>Dodano:</b> {{date("H:i:s, d.m.Y", strtotime($article->created_at))}}</div>
+                    <div><b>Ilość odpowiedzi:</b> {{$article->post()->where('checked_post', true)->count()}}</div>
+                    <div><b>Tagi:</b> @foreach($article->tag as $tag){{$tag->tag_name}}@endforeach </div>
+                    <div><b>Ostatnia odpowiedź: </b></div>
+                    @foreach($article->post()->latest('created_at')->where('is_moderated', false)->get() as $key=>$post)
+                        @if($key == 0)
+                            <div><p>{!! $post->body !!} - <b>{{$post->name}}</b></p></div>
+                        @endif
+                    @endforeach
+
+                </div>
+            </div>
+        </a>
+    @endforeach
+    {!! $articles->render() !!}
 @endsection
 
 @section('content-2')
